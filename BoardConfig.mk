@@ -103,10 +103,8 @@ TARGET_SUPPORTS_32_BIT_APPS :=
 TARGET_SUPPORTS_64_BIT_APPS := true
 endif
 
-# Don't dex preopt apps to avoid I/O congestion due to paging larger sized
-# pre-compiled .odex files as opposed to background generated interpret-only
-# odex files.
-WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+# Enable dexpreopt to speed boot time
+WITH_DEXPREOPT := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/flounder
 
