@@ -23,12 +23,6 @@ PRODUCT_PACKAGES := \
 
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
-# This ensures the needed build tools are available.
-# TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
-ifeq ($(HOST_OS),linux)
-TARGET_USERIMAGES_USE_F2FS := true
-endif
-
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.flounder
 
 TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
