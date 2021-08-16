@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/xenonhd_flounder.mk
+
+COMMON_LUNCH_CHOICES := \
+    xenonhd_flounder-user \
+    xenonhd_flounder-userdebug \
+    xenonhd_flounder-eng
