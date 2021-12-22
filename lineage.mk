@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/dot/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
@@ -43,6 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="volantis-user 7.1.1 N9F27M 4333998 release-keys"
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_flounder
+PRODUCT_NAME := dot_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
