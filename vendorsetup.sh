@@ -14,4 +14,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_flounder-userdebug
+add_lunch_combo xenonhd_flounder-user
+add_lunch_combo xenonhd_flounder-userdebug
+add_lunch_combo xenonhd_flounder-eng
