@@ -1,4 +1,4 @@
-# CyanogenMod Specific Changes
+# XenonHD Specific Changes
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2048
@@ -42,10 +42,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/N9F27M/4333998:user/release-keys \
     PRIVATE_BUILD_DESC="volantis-user 7.1.1 N9F27M 4333998 release-keys"
 
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions
 PRODUCT_NAME := xenonhd_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
 
 # Device Maintainer
 PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer="SirRGB"
+
+# Exclude AudioFX
+DISABLE_AUDIOFX := true
