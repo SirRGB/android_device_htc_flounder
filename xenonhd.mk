@@ -46,3 +46,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_NAME := xenonhd_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
+
+# Device Maintainer
+PRODUCT_PROPERTY_OVERRIDES += ro.xenonhd.maintainer="SirRGB"
