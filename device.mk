@@ -170,7 +170,7 @@ endif
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     NfcNci \
-    Tag \
+    Tag
 
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -237,10 +237,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	VolantisKeyboard
 
-# for launcher layout
-#PRODUCT_PACKAGES += \
-#    VolantisLayout
-
 # drmservice prop
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -272,7 +268,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_SUPPORTS_BOOT_SIGNER := false
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/sdhci-tegra.3/by-name/APP
-#PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/sdhci-tegra.3/by-name/VNR
 
 # for warning
 PRODUCT_PACKAGES += \
@@ -291,12 +286,8 @@ ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
     $(call add-product-dex-preopt-module-config,wifi-service,--generate-mini-debug-info)
 endif
 
-$(call inherit-product-if-exists, hardware/nvidia/tegra132/tegra132.mk)
-$(call inherit-product-if-exists, vendor/nvidia/proprietary-tegra132/tegra132-vendor.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder/flounder-vendor.mk)
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354/device-bcm.mk)
-$(call inherit-product-if-exists, vendor/htc/flounder/audio/lifevibes/lvve/device-vendor-lvve.mk)
-$(call inherit-product-if-exists, vendor/htc/flounder/audio/tfa/device-vendor-tfa.mk)
 
 # Add dependency of the proprietary keystore.flounder module.
 PRODUCT_PACKAGES += \
