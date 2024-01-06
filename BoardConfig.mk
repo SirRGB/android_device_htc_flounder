@@ -29,6 +29,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := denver
 
+# Disable emulator for "make dist" until there is a 64-bit qemu kernel
+BUILD_EMULATOR := false
+
 TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=flounder
@@ -40,6 +43,7 @@ TARGET_BOARD_INFO_FILE := device/htc/flounder/board-info.txt
 
 TARGET_BOOTLOADER_BOARD_NAME := flounder
 
+USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 BOARD_DISABLE_TRIPLE_BUFFERED_DISPLAY_SURFACES := true
 
@@ -64,6 +68,7 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a57
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/flounder/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.flounder libhealthd.flounder
@@ -110,8 +115,12 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/flounder
 
+ART_USE_HSPACE_COMPACT=true
+
 # let charger mode enter suspend
 BOARD_CHARGER_ENABLE_SUSPEND := true
+
+MALLOC_SVELTE := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
