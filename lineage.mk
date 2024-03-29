@@ -4,17 +4,6 @@
 TARGET_SCREEN_HEIGHT := 2048
 TARGET_SCREEN_WIDTH := 1536
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.cpp.duplication=false
-
-# Storage
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.sdcardfs=true
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
@@ -29,10 +18,6 @@ BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := lineage_flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-
-# Extra Packages
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras
 
 # CM Overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/flounder/overlay-cm

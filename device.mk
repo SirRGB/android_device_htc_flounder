@@ -160,6 +160,17 @@ DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 endif
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.cpp.duplication=false
+
+# Extra Packages
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras
+
 # NFC packages
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
@@ -237,12 +248,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# facelock properties
+# Storage
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.facelock.black_timeout=700 \
-    ro.facelock.det_timeout=2500 \
-    ro.facelock.rec_timeout=3500 \
-    ro.facelock.est_max_time=500
+    ro.sys.sdcardfs=true
 
 # Allows healthd to boot directly from charger mode rather than initiating a reboot.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
